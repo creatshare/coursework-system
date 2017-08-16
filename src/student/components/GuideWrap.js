@@ -2,17 +2,8 @@
  * Created by hanyile on 2017/8/15.
  */
 
-import React, {Component} from 'react'
-import {
-    Container, Message, Table,
-    Icon, Dimmer, Loader,
-    Input, Form, Select,
-    Checkbox, Radio, TextArea,
-    Label, Divider, Button,
-    Dropdown, Grid, Header,
-    Image, List, Menu,
-    Segment, Transition
-} from 'semantic-ui-react'
+import React from 'react'
+import { Container, Message, Header, Segment } from 'semantic-ui-react'
 
 const GuideWrap = () => (
     <Container className="GuideContainer">
