@@ -4,34 +4,31 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 
 import './student/style/index.css'
-// import App from
+
 import NotFound from './student/components/NotFound'
-import HomeBody from './student/components/HomeBody'
-import ProfileBody from './student/components/ProfileBody'
 import LoginContainer from './student/container/LoginContainer'
 import HomeContainer from './student/container/HomeContainer'
+
 import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(
     <Router>
       <div>
         <ul>
-          <li><Link to="/">App</Link></li>
+          <li><Link to="/">Login</Link></li>
           <li><Link to="/app/home">HomeContainer</Link></li>
           <li><Link to="/app/profile">ProfileContainer</Link></li>
           <li><Link to="/404">NotFound</Link></li>
         </ul>
-
         <hr/>
-        <Route exact path="/" component={LoginContainer} />
-        <HomeContainer>
-          <Route path="/home" component={HomeBody}/>
-          <Route path="/profile" component={ProfileBody}/>
-        </HomeContainer>
-        <Route path="/404" component={NotFound}/>
+        <Switch>
+          <Route exact path="/" component={LoginContainer}/>
+          <Route path="/app" component={HomeContainer}/>
+          <Route component={NotFound}/>
+        </Switch>
       </div>
     </Router>,
     document.getElementById('app')

@@ -3,17 +3,20 @@
  */
 
 import React, {Component} from 'react'
+import { Route } from 'react-router-dom'
 
 import IndexHeader from '../components/IndexHeader'
 import HomeBody from '../components/HomeBody'
+import ProfileBody from '../components/ProfileBody'
 import IndexFooter from '../components/IndexFooter'
 
 class HomeContainer extends Component {
-  render() {
+  render () {
     return (
         <div>
           <IndexHeader />
-          <HomeBody />
+          <Route path="/app/home" component={HomeBody}/>
+          <Route path="/app/profile" component={ProfileBody}/>
           <IndexFooter />
         </div>
     )
