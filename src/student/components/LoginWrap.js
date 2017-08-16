@@ -3,6 +3,7 @@
  */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 import Logo from '../images/logo.png'
 
@@ -30,7 +31,8 @@ const LoginWrap = () => (
             <Image src={Logo} />
             {' '}Log-in to your account
           </Header>
-          <Form size='large'>
+          {/*<Form size='large' loading>*/}
+          <Form size='large' action="/app/home">
             <Segment stacked>
               <Form.Input
                   fluid

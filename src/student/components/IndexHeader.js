@@ -19,11 +19,10 @@ const HomeHeader = () => (
             />
             C Language System
           </Menu.Item>
-          <Menu.Item as='a' href='#' target='_self' active={false}>Home</Menu.Item>
-          <Menu.Item as='a' href='#' target='_self' active={true}>Profile</Menu.Item>
-
+          <Menu.Item as='a' href='/app/home' target='_self' active={true}>Home</Menu.Item>
+          <Menu.Item as='a' href='/app/profile' target='_self' active={true}>Profile</Menu.Item>
           <Menu.Menu position='right'>
-            <Menu.Item as='a' href='#' target='_self' active={false}>Log-out</Menu.Item>
+            <Menu.Item as='a' href='/' target='_self' active={false}>Log-out</Menu.Item>
           </Menu.Menu>
         </Container>
       </Menu>
