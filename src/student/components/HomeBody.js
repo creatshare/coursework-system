@@ -3,16 +3,7 @@
  */
 
 import React from 'react'
-import {
-    Container, Message, Table,
-    Icon, Dimmer, Loader,
-    Input, Form, Select,
-    Checkbox, Radio, TextArea,
-    Label, Divider, Button,
-    Dropdown, Grid, Header,
-    Image, List, Menu,
-    Segment
-} from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
 import TaskWrap from './TaskWrap'
 import ListWrap from './ListWrap'
