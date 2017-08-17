@@ -4,13 +4,14 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import './student/style/index.css'
+import './style/index.css'
 
-import NotFound from './student/components/NotFound'
-import LoginContainer from './student/container/LoginContainer'
-import HomeContainer from './student/container/HomeContainer'
+import NotFound from './components/NotFound'
+import LoginContainer from './container/LoginContainer'
+import StudentContainer from './container/StudentContainer'
+import TeacherContainer from './container/TeacherContainer'
 
 import registerServiceWorker from './registerServiceWorker'
 
@@ -18,7 +19,8 @@ ReactDOM.render(
     <Router>
         <Switch>
           <Route exact path="/" component={LoginContainer}/>
-          <Route path="/app" component={HomeContainer}/>
+          <Route path="/s" component={StudentContainer}/>
+          <Route path="/t" component={TeacherContainer}/>
           <Route component={NotFound}/>
         </Switch>
     </Router>,

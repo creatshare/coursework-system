@@ -3,7 +3,6 @@
  */
 
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 import Logo from '../images/logo.png'
 
