@@ -21,7 +21,7 @@ ReactDOM.render(
           <Route exact path="/" component={LoginContainer}/>
           <Route path="/s" component={StudentContainer}/>
           <Route path="/t" component={TeacherContainer}/>
-          <Route component={NotFound}/>
+          <Route path="/404" component={NotFound}/>
         </Switch>
     </Router>,
     document.getElementById('app')
