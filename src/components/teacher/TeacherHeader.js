@@ -22,7 +22,6 @@ const TeacherHeader = () => (
           <Menu.Item as='a' href='/t/workshop' target='_self' active={true}>Workshop</Menu.Item>
           <Menu.Item as='a' href='/t/statistics' target='_self' active={true}>Statistics</Menu.Item>
           <Menu.Item as='a' href='/t/management' target='_self' active={true}>Management</Menu.Item>
-          <Menu.Item as='a' href='/t/history' target='_self' active={true}>History</Menu.Item>
           <Menu.Item as='a' href='/t/profile' target='_self' active={true}>Profile</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item as='a' href='/' target='_self' active={false}>Log-out</Menu.Item>

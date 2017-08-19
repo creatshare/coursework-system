@@ -11,11 +11,11 @@ import ListWrap from './ListWrap'
 const StudentBody = () => (
     <Grid divided='vertically' className="BodyGrid">
       <Grid.Row columns={2}>
-        <Grid.Column mobile={16} tablet={16} computer={8}>
+        <Grid.Column mobile={16} tablet={16} computer={6}>
           <TaskWrap />
         </Grid.Column>
 
-        <Grid.Column mobile={16} tablet={16} computer={8}>
+        <Grid.Column mobile={16} tablet={16} computer={10}>
           <ListWrap />
         </Grid.Column>
       </Grid.Row>
