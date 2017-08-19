@@ -7,7 +7,7 @@ import { Container, Message, Image, Menu } from 'semantic-ui-react'
 
 import Logo from '../images/logo.png'
 
-const HomeHeader = () => (
+const StudentHeader = () => (
     <div>
       <Menu inverted pointing stackable>
         <Container className="HeaderContainer">
@@ -19,8 +19,8 @@ const HomeHeader = () => (
             />
             C Language System
           </Menu.Item>
-          <Menu.Item as='a' href='/app/home' target='_self' active={true}>Home</Menu.Item>
-          <Menu.Item as='a' href='/app/profile' target='_self' active={true}>Profile</Menu.Item>
+          <Menu.Item as='a' href='/s/home' target='_self' active={true}>Home</Menu.Item>
+          <Menu.Item as='a' href='/s/profile' target='_self' active={true}>Profile</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item as='a' href='/' target='_self' active={false}>Log-out</Menu.Item>
           </Menu.Menu>
@@ -35,6 +35,6 @@ const HomeHeader = () => (
     </div>
 )
 
-export default HomeHeader;
+export default StudentHeader;
 
 

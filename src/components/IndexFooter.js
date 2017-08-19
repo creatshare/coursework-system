@@ -7,7 +7,7 @@ import { Container, Image, List, Segment} from 'semantic-ui-react'
 
 import Logo from '../images/logo.png'
 
-const HomeFooter = () => (
+const IndexFooter = () => (
     <Segment
         inverted
         vertical
@@ -26,4 +26,4 @@ const HomeFooter = () => (
     </Segment>
 )
 
-export default HomeFooter
+export default IndexFooter

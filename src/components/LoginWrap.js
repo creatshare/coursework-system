@@ -31,7 +31,7 @@ const LoginWrap = () => (
             {' '}Log-in to your account
           </Header>
           {/*<Form size='large' loading>*/}
-          <Form size='large' action="/app/home">
+          <Form size='large' action="/t/home">
             <Segment stacked>
               <Form.Input
                   fluid
