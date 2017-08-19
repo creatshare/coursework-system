@@ -5,7 +5,7 @@
 import React from 'react'
 import { Container, Message, Image, Menu } from 'semantic-ui-react'
 
-import Logo from '../images/logo.png'
+import Logo from '../../images/logo.png'
 
 const StudentHeader = () => (
     <div>

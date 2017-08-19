@@ -4,7 +4,7 @@
 
 import React from 'react'
 
-import LoginWrap from '../components/LoginWrap'
+import LoginWrap from '../components/public/LoginWrap'
 
 const LoginContainer = () => (
     <LoginWrap />

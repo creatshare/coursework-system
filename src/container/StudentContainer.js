@@ -5,10 +5,10 @@
 import React, {Component} from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import StudentHeader from '../components/StudentHeader'
-import StudentBody from '../components/StudentBody'
-import ProfileBody from '../components/ProfileBody'
-import IndexFooter from '../components/IndexFooter'
+import StudentHeader from '../components/student/StudentHeader'
+import StudentBody from '../components/student/StudentBody'
+import ProfileBody from '../components/public/ProfileBody'
+import IndexFooter from '../components/public/IndexFooter'
 
 class StudentContainer extends Component {
   render () {

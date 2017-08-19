@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './style/index.css'
 
-import NotFound from './components/NotFound'
+import NotFound from './components/public/NotFound'
 import LoginContainer from './container/LoginContainer'
 import StudentContainer from './container/StudentContainer'
 import TeacherContainer from './container/TeacherContainer'
