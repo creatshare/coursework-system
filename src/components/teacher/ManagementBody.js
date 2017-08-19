@@ -3,23 +3,122 @@
  */
 
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
+import { Container, Card, Button } from 'semantic-ui-react'
 
-import TaskWrap from '../student/TaskWrap'
-import ListWrap from '../student/ListWrap'
+const ManagementBody = () => (
+    <Container className="HistoryContainer">
+      <Card.Group itemsPerRow={3}>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              软件1501班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              软件1502班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
 
-const WorkshopBody = () => (
-    <Grid divided='vertically' className="BodyGrid">
-      <Grid.Row columns={2}>
-        <Grid.Column mobile={16} tablet={16} computer={8}>
-          <TaskWrap />
-        </Grid.Column>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              软件1503班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
 
-        <Grid.Column mobile={16} tablet={16} computer={8}>
-          <ListWrap />
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              软件1504班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              软件1505班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              网络1501班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              网络1502班
+            </Card.Header>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>Modify</Button>
+              <Button basic color='red'>Delete</Button>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content>
+            <div className='ui two buttons'>
+              <Button basic color='blue'>Add A New Year</Button>
+            </div>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='blue'>Add A New Class</Button>
+            </div>
+          </Card.Content>
+        </Card>
+      </Card.Group>
+    </Container>
 )
 
-export default WorkshopBody
+export default ManagementBody

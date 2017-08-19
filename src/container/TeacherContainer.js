@@ -9,7 +9,6 @@ import TeacherHeader from '../components/teacher/TeacherHeader'
 import WorkshopBody from '../components/teacher/WorkshopBody'
 import StatisticsBody from '../components/teacher/StatisticsBody'
 import ManagementBody from '../components/teacher/ManagementBody'
-import HistoryBody from '../components/teacher/HistoryBody'
 import ProfileBody from '../components/public/ProfileBody'
 import IndexFooter from '../components/public/IndexFooter'
 
@@ -22,7 +21,6 @@ class TeacherContainer extends Component {
             <Route path="/t/workshop" component={WorkshopBody}/>
             <Route path="/t/statistics" component={StatisticsBody}/>
             <Route path="/t/management" component={ManagementBody}/>
-            <Route path="/t/history" component={HistoryBody}/>
             <Route path="/t/profile" component={ProfileBody}/>
             <Redirect to="/404"/>
           </Switch>
