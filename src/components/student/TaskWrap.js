@@ -9,10 +9,6 @@ const TaskWrap = () => (
     <Container className="TaskContainer">
       <Segment className="TaskSegment">
 
-        {/*<Dimmer active inverted>*/}
-        {/*<Loader indeterminate>Submitting...</Loader>*/}
-        {/*</Dimmer>*/}
-
         <Header as='h1'>Submit Your Homework</Header>
         <Form>
           <Form.Field control={Input} label='Title' placeholder='Work Title' />
