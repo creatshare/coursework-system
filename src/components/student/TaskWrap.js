@@ -9,7 +9,7 @@ const TaskWrap = () => (
     <Container className="TaskContainer">
       <Segment className="TaskSegment">
 
-        <Header as='h1'>Submit Your Homework</Header>
+        <Header as='h1' style={{textAlign: 'center'}}>Submit Your Homework</Header>
         <Form>
           <Form.Field control={Input} label='Title' placeholder='Work Title' />
           <Form.Field control={Select} label='Type (Please review carefully)' options={[

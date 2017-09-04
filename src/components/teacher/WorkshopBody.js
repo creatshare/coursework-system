@@ -12,6 +12,7 @@ const WorkshopBody = () => (
           <Form>
             <Form.Group widths='equal'>
               <Form.Field control={Select} label='Class' options={[
+                {key: 'all', text: 'all', value: 'all'},
                 {key: 'rj1501', text: '软件1501', value: 'rj1501'},
                 {key: 'rj1502', text: '软件1502', value: 'rj1502'},
                 {key: 'rj1503', text: '软件1503', value: 'rj1503'},
@@ -41,14 +42,14 @@ const WorkshopBody = () => (
           <Table celled className="WorkshopTable">
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell>Class ID</Table.HeaderCell>
+                <Table.HeaderCell>Class Name</Table.HeaderCell>
                 <Table.HeaderCell>Student ID</Table.HeaderCell>
                 <Table.HeaderCell>Student Name</Table.HeaderCell>
                 <Table.HeaderCell>Submit Time</Table.HeaderCell>
                 <Table.HeaderCell>Type</Table.HeaderCell>
                 <Table.HeaderCell>Title</Table.HeaderCell>
                 <Table.HeaderCell>File Size</Table.HeaderCell>
-                <Table.HeaderCell>Action</Table.HeaderCell>
+                <Table.HeaderCell>Rating</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
 
@@ -61,97 +62,17 @@ const WorkshopBody = () => (
                 <Table.Cell>Home Work</Table.Cell>
                 <Table.Cell>C Language System</Table.Cell>
                 <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
+                <Table.Cell>A</Table.Cell>
               </Table.Row>
               <Table.Row>
-                <Table.Cell>2</Table.Cell>
+                <Table.Cell>1</Table.Cell>
                 <Table.Cell>04153088</Table.Cell>
                 <Table.Cell>韩亦乐</Table.Cell>
                 <Table.Cell>2017-08-01</Table.Cell>
                 <Table.Cell>Home Work</Table.Cell>
                 <Table.Cell>C Language System</Table.Cell>
                 <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>3</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>4</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>5</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>6</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>7</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>8</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>9</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>10</Table.Cell>
-                <Table.Cell>04153088</Table.Cell>
-                <Table.Cell>韩亦乐</Table.Cell>
-                <Table.Cell>2017-08-01</Table.Cell>
-                <Table.Cell>Home Work</Table.Cell>
-                <Table.Cell>C Language System</Table.Cell>
-                <Table.Cell>1024b</Table.Cell>
-                <Table.Cell><Button>Evaluate</Button></Table.Cell>
+                <Table.Cell>-</Table.Cell>
               </Table.Row>
             </Table.Body>
           </Table>
