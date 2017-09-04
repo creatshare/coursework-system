@@ -5,11 +5,18 @@ html, body {
     width: 100%;
     overflow-x: hidden !important;
     overflow-y: hidden !important;
-    background-color: #f7f7f7;
+    background-image: url("../images/bg.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 登录页 */
-/* 直接内联 */
+
+.loginContainer {
+    margin-top: 33vh;
+}
 
 /* 主页 */
 

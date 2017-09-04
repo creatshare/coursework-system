@@ -13,7 +13,7 @@ class LoginWrap extends Component {
 
   render () {
     return (
-        <div className='login-form'>
+        <div className='loginContainer'>
           {/*
            Heads up! The styles below are necessary for the correct render of this example.
            You can do same with CSS, the main idea is that all the elements up to the `Grid`
