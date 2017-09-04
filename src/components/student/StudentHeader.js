@@ -17,8 +17,9 @@ const StudentHeader = () => (
                 src={Logo}
                 className="HeaderImage"
             />
-            C Language System
+            Cousework Management System
           </Menu.Item>
+
           <Menu.Item as='a' href='/s/home' target='_self' active={true}>Home</Menu.Item>
           <Menu.Item as='a' href='/s/profile' target='_self' active={true}>Profile</Menu.Item>
           <Menu.Menu position='right'>

@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { Container, Table, Icon, Form, Select, Button, Menu, Segment } from 'semantic-ui-react'
+import { Container, Table, Icon, Header, Form, Select, Button, Menu, Segment } from 'semantic-ui-react'
 
 const ListWrap = () => (
     <Container className="ListContainer">
@@ -12,6 +12,8 @@ const ListWrap = () => (
         {/*<Dimmer active inverted>*/}
         {/*<Loader indeterminate>Loading the data</Loader>*/}
         {/*</Dimmer>*/}
+
+        <Header as='h1' style={{textAlign: 'center'}}>History</Header>
 
         <Form>
           <Form.Field control={Select} label='Type' options={[
@@ -34,127 +36,91 @@ const ListWrap = () => (
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Work ID</Table.HeaderCell>
               <Table.HeaderCell>Submit Time</Table.HeaderCell>
               <Table.HeaderCell>Type</Table.HeaderCell>
               <Table.HeaderCell>Title</Table.HeaderCell>
               <Table.HeaderCell>Rating</Table.HeaderCell>
-              <Table.HeaderCell>Comment</Table.HeaderCell>
-              <Table.HeaderCell>Action</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
 
           <Table.Body>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
               <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
-
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
-
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
-
             <Table.Row>
-              <Table.Cell>1</Table.Cell>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
-              <Table.Cell>[Read more]</Table.Cell>
-              <Table.Cell>
-                <Button>Modify</Button>
-                <Button>Delete</Button>
-              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>2017-08-01</Table.Cell>
+              <Table.Cell>Home Work</Table.Cell>
+              <Table.Cell>C Language System</Table.Cell>
+              <Table.Cell>-</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>2017-08-01</Table.Cell>
+              <Table.Cell>Home Work</Table.Cell>
+              <Table.Cell>C Language System</Table.Cell>
+              <Table.Cell>-</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>2017-08-01</Table.Cell>
+              <Table.Cell>Home Work</Table.Cell>
+              <Table.Cell>C Language System</Table.Cell>
+              <Table.Cell>-</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>2017-08-01</Table.Cell>
+              <Table.Cell>Home Work</Table.Cell>
+              <Table.Cell>C Language System</Table.Cell>
+              <Table.Cell>-</Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>

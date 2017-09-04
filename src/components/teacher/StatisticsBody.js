@@ -23,13 +23,6 @@ const StatisticsBody = () => (
                 {key: 'rj1504', text: '软件1504', value: 'rj1504'},
                 {key: 'rj1505', text: '软件1505', value: 'rj1505'},
               ]} placeholder='Select the class' />
-              <Form.Field control={Select} label='Page Num' options={[
-                {key: 'no1', text: 'No.1', value: 'no1'},
-                {key: 'no2', text: 'No.2', value: 'no2'},
-                {key: 'no3', text: 'No.3', value: 'no3'},
-                {key: 'no4', text: 'No.4', value: 'no4'},
-                {key: 'no5', text: 'No.5', value: 'no5'},
-              ]} placeholder='Select the class' />
             </Form.Group>
             <Form.Group widths='equal'>
               <Form.Field control={Input} label='学号' placeholder='Input one student`s id card'/>
