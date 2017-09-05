@@ -36,6 +36,6 @@ const StudentHeader = () => (
     </div>
 )
 
-export default StudentHeader;
+export default StudentHeader
 
 
