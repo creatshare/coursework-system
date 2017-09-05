@@ -27,7 +27,7 @@ const ItemModal = () => (
             theme="github"
             editorProps={{$blockScrolling: true}}
             readOnly="true"
-            value={"#include \<stido.h\>\n\nint main (void) \{\n    return 0;\n#include\n#include\n#include\n#include\n#include\n#include\n#include\n\}"}
+            value={"#include \<stido.h\>\n\nint main (void) \{\n    printf(\"Hello World!\");\n    return 0;\n\}"}
           />
           <Header>Comment</Header>
           <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
