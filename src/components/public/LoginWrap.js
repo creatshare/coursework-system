@@ -27,7 +27,7 @@ class LoginWrap extends Component {
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h5' color='teal' textAlign='center'>
                 <Image src={Logo} />
-                {' '}Cousework Management System
+                {' '}Coursework Management System
               </Header>
               {/*<Form size='large' loading>*/}
               <Form size='large' action="/s/home">

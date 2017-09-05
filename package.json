@@ -5,6 +5,7 @@
   "dependencies": {
     "history": "3.2.1",
     "react": "^15.6.1",
+    "react-ace": "^5.2.0",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.11",
@@ -26,5 +27,10 @@
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5"
+  },
+  "author": {
+    "name": "icorvoh",
+    "email": "icorvoh@qq.com",
+    "url": "https://github.com/icorvoh"
   }
 }

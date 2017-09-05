@@ -3,7 +3,9 @@
  */
 
 import React from 'react'
-import { Container, Table, Icon, Header, Form, Select, Button, Menu, Segment } from 'semantic-ui-react'
+import { Container, Table, Header, Form, Select, Segment } from 'semantic-ui-react'
+
+import ItemModal from './ItemModal'
 
 const ListWrap = () => (
     <Container className="ListContainer">
@@ -13,7 +15,7 @@ const ListWrap = () => (
         {/*<Loader indeterminate>Loading the data</Loader>*/}
         {/*</Dimmer>*/}
 
-        <Header as='h1' style={{textAlign: 'center'}}>History</Header>
+        <Header as='h1'>History</Header>
 
         <Form>
           <Form.Field control={Select} label='Type' options={[
@@ -48,79 +50,19 @@ const ListWrap = () => (
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>A</Table.Cell>
+              <Table.Cell><ItemModal/></Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
+              <Table.Cell><ItemModal/></Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>2017-08-01</Table.Cell>
               <Table.Cell>Home Work</Table.Cell>
               <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>2017-08-01</Table.Cell>
-              <Table.Cell>Home Work</Table.Cell>
-              <Table.Cell>C Language System</Table.Cell>
-              <Table.Cell>-</Table.Cell>
+              <Table.Cell><ItemModal/></Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>

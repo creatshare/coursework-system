@@ -4,26 +4,37 @@
 
 import React from 'react'
 import { Container, Input, Form, Select, Checkbox, TextArea, Button, Header, Segment } from 'semantic-ui-react'
+import Brace from 'brace';
+import AceEditor from 'react-ace';
+import 'brace/mode/c_cpp';
+import 'brace/theme/github'
 
 const TaskWrap = () => (
     <Container className="TaskContainer">
       <Segment className="TaskSegment">
 
-        <Header as='h1' style={{textAlign: 'center'}}>Submit Your Homework</Header>
+        <Header as='h1'>Submit Your Homework</Header>
         <Form>
           <Form.Field control={Input} label='Title' placeholder='Work Title' />
-          <Form.Field control={Select} label='Type (Please review carefully)' options={[
+          <Form.Field control={Select} label='Type (Be carefully to pick)' options={[
             {key: 'ho', text: 'Home Work', value: 'ho'},
             {key: 'co', text: 'Couse Work', value: 'co'},
             {key: 'cl', text: 'Class Work', value: 'cl'},
             {key: 'ot', text: 'Other', value: 'ot'},
           ]} placeholder='Select Your Work Type' />
-          <Form.Field
-              control={TextArea}
-              label='Your Code'
-              placeholder='Write or Paste your C program code here'
-              className="TaskField"
-          />
+
+          <Form.Field className="TaskField">
+            <label>Your code</label>
+            <AceEditor
+              style={{
+                height: '32vh',
+                width: '100%',
+              }}
+              mode="c_cpp"
+              theme="github"
+              editorProps={{$blockScrolling: true}}
+            />
+          </Form.Field>
           <Form.Field control={Checkbox} label="I'm sure I wrote these code by my own" />
           <Form.Field control={Button}>Submit</Form.Field>
         </Form>

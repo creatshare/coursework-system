@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { Container, Table, Form, Select, Segment, Input, Button } from 'semantic-ui-react'
+import { Container, Table, Form, Select, Segment, Input } from 'semantic-ui-react'
 
 const WorkshopBody = () => (
     <div>
