@@ -33,6 +33,7 @@ const TaskWrap = () => (
               mode="c_cpp"
               theme="github"
               editorProps={{$blockScrolling: true}}
+              value={"#include \<stido.h\>\n\nint main (void) \{\n    printf(\"Hello World!\");\n    return 0;\n\}"}
             />
           </Form.Field>
           <Form.Field control={Checkbox} label="I'm sure I wrote these code by my own" />
