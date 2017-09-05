@@ -4,8 +4,11 @@
 
 import React from 'react'
 import { Container, Table, Header, Form, Select, Segment } from 'semantic-ui-react'
-
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
 import ItemModal from './ItemModal'
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 const ListWrap = () => (
     <Container className="ListContainer">
@@ -26,10 +29,10 @@ const ListWrap = () => (
             {key: 'ot', text: 'Other', value: 'ot'},
           ]} placeholder='Select Your Work Type' />
           <Form.Group widths='equal'>
-            <Form.Field control={Select} label='From Date' options={[
+            <Form.Field control={DatePicker} label='From Date' options={[
               {key: 'fd', text: '2017-08-01', value: 'fd'}
             ]} placeholder='Select Date' className="ListDateField"/>
-            <Form.Field control={Select} label='To' options={[
+            <Form.Field control={DatePicker} label='To' options={[
               {key: 'td', text: '2017-08-01', value: 'td'}
             ]} placeholder='Select Date' className="ListDateField"/>
           </Form.Group>
