@@ -4,8 +4,8 @@
 
 import React from 'react'
 import { Header, Modal, Button, Icon } from 'semantic-ui-react'
-import AceEditor from 'react-ace';
-import 'brace/mode/c_cpp';
+import AceEditor from 'react-ace'
+import 'brace/mode/c_cpp'
 import 'brace/theme/github'
 
 const ItemModal = () => (

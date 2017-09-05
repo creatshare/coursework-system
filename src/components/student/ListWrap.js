@@ -8,7 +8,7 @@ import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import ItemModal from './ItemModal'
 
-import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker.css'
 
 const ListWrap = () => (
     <Container className="ListContainer">
