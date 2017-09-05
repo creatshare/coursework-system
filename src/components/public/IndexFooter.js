@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { Container, Image, List, Segment} from 'semantic-ui-react'
+import { Container, List, Segment} from 'semantic-ui-react'
 
 const IndexFooter = () => (
     <Segment

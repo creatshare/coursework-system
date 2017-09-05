@@ -50,7 +50,7 @@ html, body {
 
 .TaskContainer {
     margin-top: .25em !important;
-    padding: 0 1em 0 1em !important;
+    padding: 0 .5em 0 1em !important;
 }
 
 .TaskSegment {
@@ -58,8 +58,8 @@ html, body {
     overflow-y: scroll !important;
 }
 
-.TaskField textarea {
-    height: 12em !important;
+.TaskField {
+    height: 34vh !important;
     resize: none !important;
 }
 
@@ -109,7 +109,7 @@ html, body {
 }
 
 .GuideHeader {
-    margin: .5em 0 1em 0 !important;
+    margin: 0 0 1em 0 !important;
 }
 
 /* IndexFooter */
@@ -176,4 +176,10 @@ html, body {
     margin-top: .25em !important;
     width: 100% !important;
     padding: 0 1em 0 1em !important;
+}
+
+/* CodeContent */
+
+.CodeContent {
+    resize: none !important;
 }

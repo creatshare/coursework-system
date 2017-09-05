@@ -8,7 +8,7 @@ import { Container, Message, Header, Segment } from 'semantic-ui-react'
 const GuideWrap = () => (
     <Container className="GuideContainer">
       <Segment className="GuideSegment">
-        <Header as='h1' className="GuideHeader" textAlign="center">
+        <Header as='h1' className="GuideHeader">
           Q & A
         </Header>
         <Message
@@ -29,12 +29,17 @@ const GuideWrap = () => (
         <Message
             icon='comments outline'
             header='How important is this system?'
-            content='Decide your usual grades.'
+            content='It can decide your usual grades.'
         />
         <Message
             icon='comments outline'
             header='Will there be any exciting new feature?'
             content='We are working on it and we will tell you in time.'
+        />
+        <Message
+            icon='comments outline'
+            header='What technology built this program?'
+            content='Not only Java, Node.js, Semantic-UI and React.js.'
         />
       </Segment>
     </Container>
