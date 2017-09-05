@@ -183,3 +183,13 @@ html, body {
 .CodeContent {
     resize: none !important;
 }
+
+/* DatePicker */
+
+.react-datepicker-wrapper {
+    width: 100% !important;
+}
+
+.react-datepicker__input-container {
+    width: 100% !important;
+}
