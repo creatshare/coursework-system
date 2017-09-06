@@ -3,7 +3,6 @@
  */
 
 import React, {Component} from 'react'
-import request from 'superagent';
 
 import LoginWrap from '../components/public/LoginWrap'
 

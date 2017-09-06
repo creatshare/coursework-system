@@ -2,17 +2,19 @@
  * Created by hanyile on 2017/8/10.
  */
 
-import React, {Component} from 'react'
+import React, {Component}  from 'react'
 import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
+import createHistory from 'history/createBrowserHistory'
 import Logo from '../../images/logo.png'
 
 import request from 'superagent';
+
+const history = createHistory()
 
 class LoginWrap extends Component {
   constructor (props) {
     super(props)
     this.state = { id: '', password: ''}
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -37,7 +39,14 @@ class LoginWrap extends Component {
         } else {
           let identity = parseInt(data.text.charAt(0))
           let token = parseInt(data.text)
-          identity === 1 ? alert("student, welcome back!") : alert("Oops...We are working on building the teacher`s system. \rPlease come again in a few weeks!")
+          localStorage.setItem("id", identity)
+          localStorage.setItem("token", token)
+          if (identity === 1) {
+            history.push('/s/home', {})
+            window.location.reload()
+          } else {
+            alert("Oops...\rWe are working on building the teacher`s system. \rPlease come again in a few weeks!")
+          }
         }
       });
   }

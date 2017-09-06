@@ -3,8 +3,7 @@
  */
 
 import React from 'react'
-import { Container, Input, Form, Select, Checkbox, TextArea, Button, Header, Segment } from 'semantic-ui-react'
-import Brace from 'brace';
+import { Container, Input, Form, Select, Checkbox, Button, Header, Segment } from 'semantic-ui-react'
 import AceEditor from 'react-ace';
 import 'brace/mode/c_cpp';
 import 'brace/theme/github'
@@ -33,8 +32,7 @@ const TaskWrap = () => (
               mode="c_cpp"
               theme="github"
               editorProps={{$blockScrolling: true}}
-              value={"#include \<stido.h\>\n\nint main (void) \{\n    printf(\"Hello World!\");\n    return 0;\n\}"}
-            />
+              value={"#include \<stido.h\>\n\nint main (void) \{\n    printf(\"Hello World!\");\n    return 0;\n\}"}/>
           </Form.Field>
           <Form.Field control={Checkbox} label="I'm sure I wrote these code by my own" />
           <Form.Field control={Button}>Submit</Form.Field>

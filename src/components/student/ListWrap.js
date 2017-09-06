@@ -5,7 +5,6 @@
 import React from 'react'
 import { Container, Table, Header, Form, Select, Segment } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
-import moment from 'moment'
 import ItemModal from './ItemModal'
 
 import 'react-datepicker/dist/react-datepicker.css'
