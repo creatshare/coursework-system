@@ -9,7 +9,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 var ROOT_PATH = path.resolve(__dirname);
 var STUDENT_PATH = path.resolve(ROOT_PATH, 'src/student'); // __dirname 中的src目录，以此类推
-var STUDENT_INDEX = path.resolve(STUDENT_PATH, 'index.js'); // 根目录文件 index.js 地址
+var STUDENT_INDEX = path.resolve(STUDENT_PATH, 'index.js'); // 根目录文件 oneMiddleware.js 地址
 var BUILD_PATH = path.resolve(ROOT_PATH, 'dist'); // 发布文件所存放的目录
 
 module.exports = {

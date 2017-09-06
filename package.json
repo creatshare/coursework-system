@@ -2,6 +2,7 @@
   "name": "c-language-system",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://localhost:63342/Coursework-Management-System/build/",
   "dependencies": {
     "history": "3.2.1",
     "react": "^15.6.1",
