@@ -3,12 +3,43 @@
  */
 
 import React, {Component} from 'react'
-import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
 import Logo from '../../images/logo.png'
 
+import request from 'superagent';
+
 class LoginWrap extends Component {
-  doAction () {
-    console.log(1)
+  constructor (props) {
+    super(props)
+    this.state = { id: '', password: ''}
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange = (e, { name, value }) => this.setState({ [name]: value })
+
+  handleSubmit () {
+    const { id, password } = this.state
+    let loginInfo = {
+      id: id,
+      password: password
+    }
+    request.post('http://222.24.63.100:9138/cms/login')
+      .type('form')
+      .send({
+        id: loginInfo.id,
+        pass: loginInfo.password
+      })
+      .end((err, data)=> {
+        if (data.text === "0") {
+          alert("error input")
+        } else {
+          let identity = parseInt(data.text.charAt(0))
+          let token = parseInt(data.text)
+          identity === 1 ? alert("student, welcome back!") : alert("Oops...We are working on building the teacher`s system. \rPlease come again in a few weeks!")
+        }
+      });
   }
 
   render () {
@@ -30,20 +61,26 @@ class LoginWrap extends Component {
                 {' '}Coursework Management System
               </Header>
               {/*<Form size='large' loading>*/}
-              <Form size='large' action="/s/home">
+              <Form size='large' onSubmit={this.handleSubmit}>
                 <Segment stacked>
                   <Form.Input
+                      required
+                      name="id"
                       fluid
                       icon='user'
                       iconPosition='left'
                       placeholder='ID'
+                      onChange={this.handleChange}
                   />
                   <Form.Input
+                      required
+                      name="password"
                       fluid
                       icon='lock'
                       iconPosition='left'
                       placeholder='Password'
                       type='password'
+                      onChange={this.handleChange}
                   />
                   <Button
                       fluid
@@ -52,6 +89,11 @@ class LoginWrap extends Component {
                   >Login</Button>
                 </Segment>
               </Form>
+              <Message
+                  error
+                  header='Action Error'
+                  content='Please double-check your form'
+              />
             </Grid.Column>
           </Grid>
         </div>
