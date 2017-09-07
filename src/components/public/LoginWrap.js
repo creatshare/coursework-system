@@ -5,18 +5,32 @@
 import React, {Component}  from 'react'
 import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
 import createHistory from 'history/createBrowserHistory'
-import Logo from '../../images/logo.png'
+import request from 'superagent'
 
-import request from 'superagent';
+import Logo from '../../images/logo.png'
 
 const history = createHistory()
 
 class LoginWrap extends Component {
   constructor (props) {
     super(props)
-    this.state = { id: '', password: ''}
+    this.state = {
+      id: '',
+      password: '',
+      msgShow: "false",
+      msgHeader: '',
+      msgContent: ''
+    }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  showMsg (msgShow, msgHeader, msgContent) {
+    this.setState({
+      msgShow: msgShow,
+      msgHeader: msgHeader,
+      msgContent: msgContent
+    })
   }
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
@@ -34,21 +48,23 @@ class LoginWrap extends Component {
         pass: loginInfo.password
       })
       .end((err, data)=> {
-        if (data.text === "0") {
-          alert("error input")
-        } else {
-          let identity = parseInt(data.text.charAt(0))
+        if (!data) {
+          this.showMsg("true", 'Web Server Error.', 'The Web Server is offline.')
+        } else if (data.text === "0") {
+          this.showMsg("true", 'Account / Password Error.', 'Please double check your form.')
+        } else if (data.text.charAt(0) === "1") {
+          let identity = parseInt(data.text).charAt(0)
           let token = parseInt(data.text)
           localStorage.setItem("id", identity)
           localStorage.setItem("token", token)
-          if (identity === 1) {
-            history.push('/s/home', {})
-            window.location.reload()
-          } else {
-            alert("Oops...\rWe are working on building the teacher`s system. \rPlease come again in a few weeks!")
-          }
+          history.push('/s/home', {})
+          window.location.reload()
+        } else if (data.text.charAt(0) === "2") {
+          this.showMsg("true", 'Login Error', 'The teacher`s system is under construction.')
+        } else {
+          this.showMsg("true", 'Amazing Error', 'Something cannot be happened but happened...')
         }
-      });
+      })
   }
 
   render () {
@@ -98,11 +114,16 @@ class LoginWrap extends Component {
                   >Login</Button>
                 </Segment>
               </Form>
-              <Message
-                  error
-                  header='Action Error'
-                  content='Please double-check your form'
-              />
+              {(() => {
+                switch (this.state.msgShow) {
+                  case "true": return (<Message
+                      error
+                      header={this.state.msgHeader}
+                      content={this.state.msgContent}
+                  />)
+                  case "false": return
+                }
+              })()}
             </Grid.Column>
           </Grid>
         </div>

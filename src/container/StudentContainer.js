@@ -11,13 +11,21 @@ import ProfileBody from '../components/public/ProfileBody'
 import IndexFooter from '../components/public/IndexFooter'
 
 class StudentContainer extends Component {
+  isLoggedIn () {
+    return true
+  }
+
   render () {
     return (
         <div>
           <StudentHeader />
           <Switch>
-            <Route path="/s/home" component={StudentBody}/>
-            <Route path="/s/profile" component={ProfileBody}/>
+            <Route exact path="/s/home" render={() => (
+                this.isLoggedIn() ? ( <StudentBody /> ) : ( <Redirect to="/"/> )
+            )}/>
+            <Route exact path="/s/profile" render={() => (
+                this.isLoggedIn() ? ( <ProfileBody /> ) : ( <Redirect to="/"/> )
+            )}/>
             <Redirect to="/404"/>
           </Switch>
           <IndexFooter />
