@@ -18,11 +18,11 @@ class LoginWrap extends Component {
       id: '',
       password: '',
       msgShow: "false",
+      msgStatus: "error",
       msgHeader: '',
       msgContent: ''
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   showMsg (msgShow, msgHeader, msgContent) {
@@ -37,34 +37,31 @@ class LoginWrap extends Component {
 
   handleSubmit () {
     const { id, password } = this.state
-    let loginInfo = {
-      id: id,
-      password: password
-    }
     request.post('http://222.24.63.100:9138/cms/login')
-      .type('form')
-      .send({
-        id: loginInfo.id,
-        pass: loginInfo.password
-      })
-      .end((err, data)=> {
-        if (!data) {
-          this.showMsg("true", 'Web Server Error.', 'The Web Server is offline.')
-        } else if (data.text === "0") {
-          this.showMsg("true", 'Account / Password Error.', 'Please double check your form.')
-        } else if (data.text.charAt(0) === "1") {
-          let identity = parseInt(data.text).charAt(0)
-          let token = parseInt(data.text)
-          localStorage.setItem("id", identity)
-          localStorage.setItem("token", token)
-          history.push('/s/home', {})
-          window.location.reload()
-        } else if (data.text.charAt(0) === "2") {
-          this.showMsg("true", 'Login Error', 'The teacher`s system is under construction.')
-        } else {
-          this.showMsg("true", 'Amazing Error', 'Something cannot be happened but happened...')
-        }
-      })
+        .type('form')
+        .send({
+          id: id,
+          pass: password
+        })
+        .end((err, data)=> {
+          if (!data) {
+            this.showMsg("true", 'Web Server Error.', 'The Web Server is offline.')
+          } else if (data.text === "0") {
+            this.showMsg("true", 'Account / Password Error.', 'Please double check your form.')
+          } else if (data.text.charAt(0) === "1") {
+            let token = parseInt(data.text)
+            let identity = parseInt(data.text.charAt(0))
+            sessionStorage.setItem("id", id)
+            sessionStorage.setItem("identity", identity)
+            sessionStorage.setItem("token", token)
+            history.push('/s/home', {})
+            window.location.reload()
+          } else if (data.text.charAt(0) === "2") {
+            this.showMsg("true", 'Login Error', 'The teacher`s system is under construction.')
+          } else {
+            this.showMsg("true", 'Amazing Error', 'Something cannot be happened but happened...')
+          }
+        })
   }
 
   render () {
@@ -117,7 +114,7 @@ class LoginWrap extends Component {
               {(() => {
                 switch (this.state.msgShow) {
                   case "true": return (<Message
-                      error
+                      className={this.state.msgStatus}
                       header={this.state.msgHeader}
                       content={this.state.msgContent}
                   />)

@@ -96,6 +96,10 @@ html, body {
     margin-top: 3em !important;
 }
 
+.profileMinWidthInput {
+    min-width: 10px;
+}
+
 /* GuideWrap */
 
 .GuideContainer {

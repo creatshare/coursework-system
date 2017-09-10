@@ -12,6 +12,13 @@ import IndexFooter from '../components/public/IndexFooter'
 
 class StudentContainer extends Component {
   isLoggedIn () {
+   var id = sessionStorage.getItem('id')
+   var identity = sessionStorage.getItem('identity')
+   var token = sessionStorage.getItem('token')
+    if (!id || !identity || !token) {
+      alert("Sorry, Please login first!")
+      return false
+    }
     return true
   }
 
