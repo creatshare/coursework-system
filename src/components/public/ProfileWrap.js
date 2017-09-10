@@ -76,27 +76,27 @@ class ProfileWrap extends Component {
       return
     }
     request.post('http://222.24.63.100:9138/cms/setprofile')
-        .type('form')
-        .send({
-          id: id,
-          token: token,
-          oldpass: oldPass,
-          newpass: newPass,
-          name: userName
-        })
-        .end((err, data)=> {
-          var res = parseInt(data.text)
-          if (!res) {
-            this.showInputStatus("error", "", "")
-            this.showMsg("true", "error", "Action Error", "Old Password is Wrong!")
-          } else if (res === 1) {
-            this.showInputStatus("", "", "")
-            this.showMsg("true", "success", "Success", "Well Done!")
-          }
-        })
+      .type('form')
+      .send({
+        id: id,
+        token: token,
+        oldpass: oldPass,
+        newpass: newPass,
+        name: userName
+      })
+      .end((err, data)=> {
+        var res = parseInt(data.text)
+        if (!res) {
+          this.showInputStatus("error", "", "")
+          this.showMsg("true", "error", "Action Error", "Old Password is Wrong!")
+        } else if (res === 1) {
+          this.showInputStatus("", "", "")
+          this.showMsg("true", "success", "Success", "Well Done!")
+        }
+      })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     request.post('http://222.24.63.100:9138/cms/getprofile')
         .type('form')
         .send({
@@ -132,8 +132,8 @@ class ProfileWrap extends Component {
 
             <Form className="ProfileForm" onSubmit={this.handleSubmit}>
               <Form.Group widths='equal'>
-                <Form.Input className='profileMinWidthInput' label='Class Name' placeholder={this.state.clazzName} disabled/>
-                <Form.Input className='profileMinWidthInput' label='ID card' placeholder={this.state.id} disabled/>
+                <Form.Input className='profileMinWidthInput' label='Class Name' placeholder={this.state.clazzName} readOnly/>
+                <Form.Input className='profileMinWidthInput' label='ID card' placeholder={this.state.id} readOnly/>
                 <Form.Input
                     className={"profileMinWidthInput " + this.state.inputUserNameStatus}
                     label='Change Your Name'
