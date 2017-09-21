@@ -8,20 +8,25 @@ import request from 'superagent'
 import AceEditor from 'react-ace'
 import 'brace/mode/c_cpp'
 import 'brace/theme/github'
+import createHistory from 'history/createBrowserHistory'
+
+const history = createHistory()
 
 class ItemModal extends Component {
   constructor (props) {
     super(props)
-    let { workTypeID } = props
+    let { workID } = props
     this.state = {
       id: sessionStorage.getItem("id"),
       token: sessionStorage.getItem("token"),
-      workTypeID: workTypeID,
+      workID: workID,
+      workTypeId: "",
       submitTime: "",
       workTitle: "",
       workContent: "",
       workRating: "",
-      workComment: ""
+      workComment: "",
+      workDeleteStatus: false,
     }
   }
 
@@ -31,25 +36,45 @@ class ItemModal extends Component {
       .send({
         id: this.state.id,
         token: this.state.token,
-        workid: this.state.workTypeID
+        workid: this.state.workID
       })
       .end((err, data)=> {
         let res = data.text.split("`")
-        let workRating = res[4] !== " " ? res[4] : "-"
+        let workRating = (res[4] !== " " ? res[4] : "-")
         this.setState({
           submitTime: res[0],
           workTypeID: res[1],
           workTitle: res[2],
           workContent: res[3],
           workRating: workRating,
-          workComment: res[5]
+          workComment: res[5],
+          workDeleteStatus: workRating === "-"
         })
+      })
+  }
+
+  deleteWork () {
+    request.post('http://222.24.63.100:9138/cms/delwork')
+      .type('form')
+      .send({
+        id: this.state.id,
+        token: this.state.token,
+        workid: this.state.workID
+      })
+      .end((err, data)=> {
+        if (data.text !== "1") {
+          alert("delete error!")
+        } else {
+          alert("delete succeed!")
+          history.push('/s/home', {})
+          window.location.reload()
+        }
       })
   }
 
   render () {
     return (
-        <Modal trigger={<a href="javascript: void(0)">{this.state.workRating} (Read more)</a>}>
+        <Modal trigger={<a href="javascript: void(0)">{this.state.workTitle}</a>}>
           <Modal.Header>C Language System - {this.state.workRating !== "-" ? this.state.workRating : "No rating from teachers yet"}</Modal.Header>
           <Modal.Content image scrolling>
             <Modal.Description>
@@ -74,9 +99,10 @@ class ItemModal extends Component {
             </Modal.Description>
           </Modal.Content>
           <Modal.Actions>
-            <Button primary>
-              Proceed <Icon name='right chevron' />
-            </Button>
+            {(() => {
+              if (this.state.workDeleteStatus)
+                  return <Button color='red' onClick={this.deleteWork.bind(this)}>Delete</Button>
+            })()}
           </Modal.Actions>
         </Modal>
     )

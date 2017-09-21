@@ -5,9 +5,9 @@
   "homepage": "http://localhost:63342/Coursework-Management-System/build/",
   "dependencies": {
     "history": "^4.7.2",
+    "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-ace": "^5.2.0",
-    "react-datepicker": "^0.53.0",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.11",
