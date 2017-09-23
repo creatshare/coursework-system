@@ -8,19 +8,15 @@ import request from 'superagent'
 import AceEditor from 'react-ace'
 import 'brace/mode/c_cpp'
 import 'brace/theme/github'
-import createHistory from 'history/createBrowserHistory'
-
-const history = createHistory()
 
 class ItemModal extends Component {
   constructor (props) {
     super(props)
-    let { workID } = props
+    let { workTypeID } = props
     this.state = {
       id: sessionStorage.getItem("id"),
       token: sessionStorage.getItem("token"),
-      workID: workID,
-      workTypeId: "",
+      workTypeID: workTypeID,
       submitTime: "",
       workTitle: "",
       workContent: "",
@@ -36,7 +32,7 @@ class ItemModal extends Component {
       .send({
         id: this.state.id,
         token: this.state.token,
-        workid: this.state.workID
+        workid: this.state.workTypeID
       })
       .end((err, data)=> {
         let res = data.text.split("`")
@@ -59,16 +55,12 @@ class ItemModal extends Component {
       .send({
         id: this.state.id,
         token: this.state.token,
-        workid: this.state.workID
+        workid: this.state.workTypeID
       })
       .end((err, data)=> {
-        if (data.text !== "1") {
-          alert("delete error!")
-        } else {
-          alert("delete succeed!")
-          history.push('/s/home', {})
-          window.location.reload()
-        }
+        console.log(data)
+        console.log(typeof data)
+        alert("Delete Succeed!")
       })
   }
 
@@ -101,7 +93,7 @@ class ItemModal extends Component {
           <Modal.Actions>
             {(() => {
               if (this.state.workDeleteStatus)
-                  return <Button color='red' onClick={this.deleteWork.bind(this)}>Delete</Button>
+                  return <Button color='red' onClick={this.deleteWork}>Delete</Button>
             })()}
           </Modal.Actions>
         </Modal>
