@@ -2,7 +2,7 @@
   "name": "Coursework-System",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wwwxinle.cn/build/",
+  "homepage": "http://123.206.18.177:5000/",
   "dependencies": {
     "clean-webpack-plugin": "^0.1.16",
     "history": "^4.7.2",
