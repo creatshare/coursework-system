@@ -7,9 +7,6 @@ import { Container, Table, Header, Form, Select, Segment, Dimmer, Loader, Input 
 import request from 'superagent'
 import ItemModal from './ItemModal'
 import moment from 'moment'
-import createHistory from 'history/createBrowserHistory'
-
-const history = createHistory()
 
 class ListWrap extends Component {
   constructor () {
