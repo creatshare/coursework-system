@@ -10,6 +10,7 @@ import createHistory from 'history/createBrowserHistory'
 import NotFound from './components/public/NotFound'
 import LoginContainer from './container/LoginContainer'
 import StudentContainer from './container/StudentContainer'
+import TeacherContainer from './container/TeacherContainer'
 
 import './style/index.css'
 import registerServiceWorker from './registerServiceWorker'
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={LoginContainer}/>
           <Route path="/s" component={StudentContainer}/>
+          <Route path="/t" component={TeacherContainer}/>
           <Route path="/404" component={NotFound}/>
         </Switch>
     </Router>,

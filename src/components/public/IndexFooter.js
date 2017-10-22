@@ -13,7 +13,7 @@ const IndexFooter = () => (
     >
       <Container textAlign='center'>
         <List horizontal inverted divided link>
-          <List.Item as='p'>Copyright © 2017</List.Item>
+          <List.Item as='p'>Copyright © 2017 - 2018</List.Item>
         </List>
       </Container>
     </Segment>
