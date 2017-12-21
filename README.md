@@ -1,4 +1,6 @@
 # CourseWork System
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhylerrix%2Fcoursework-system.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhylerrix%2Fcoursework-system?ref=badge_shield)
+
 
 [![](https://camo.githubusercontent.com/781b18773dfb4aef42debce1f79625768e9e10cf/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406379636c652f636f72652e737667)](https://npmjs.com/) [![](https://camo.githubusercontent.com/c0e54a826d90da52e4ee70c63fef3ee61b3ffbd5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d6c69676874677265792e737667)](./LICENSE)
 
@@ -72,3 +74,5 @@ npm start
 # LICENSE
 
 [MIT LICENSE](./LICENSE)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhylerrix%2Fcoursework-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhylerrix%2Fcoursework-system?ref=badge_large)
